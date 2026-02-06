@@ -1,0 +1,47 @@
+# ============================================
+# Node / TypeScript Backend - Pro GitIgnore
+# ============================================
+
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+logs/
+*.log
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Temporary files
+tmp/
+temp/
+
+# Supabase local configs (if ever used)
+supabase/.branches
+supabase/.temp
+supabase/.cache
+
+# Lockfiles (optional — keep if you want exact versions)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml

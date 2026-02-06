@@ -1,0 +1,35 @@
+{
+  "name": "petmatch-backend",
+  "version": "1.0.0",
+  "description": "Express + TypeScript + Supabase backend for the PetMatch app.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [
+    "express",
+    "typescript",
+    "supabase",
+    "petmatch",
+    "backend",
+    "api"
+  ],
+  "author": "VGoku",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.48.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.0",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.10.2",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  }
+}
