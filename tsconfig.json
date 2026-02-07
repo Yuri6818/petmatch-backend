@@ -1,12 +1,22 @@
 {
   "compilerOptions": {
+    /* Language & Environment */
     "target": "ES2020",
     "module": "CommonJS",
+
+    /* Project Structure */
     "rootDir": "src",
     "outDir": "dist",
+
+    /* Interop & Compatibility */
     "esModuleInterop": true,
+    "skipLibCheck": true,
+
+    /* Type Safety */
     "strict": true,
-    "skipLibCheck": true
+
+    /* Module Resolution */
+    "moduleResolution": "node"
   },
   "include": ["src"]
 }

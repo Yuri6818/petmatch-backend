@@ -5,34 +5,42 @@ import express, { Request, Response } from "express";
 import cors from "cors";
 import dotenv from "dotenv";
 
+// Route imports
 import petsRouter from "./routes/pets";
 import favoritesRouter from "./routes/favorites";
+import adoptionRouter from "./routes/adoption";
+import tagsRouter from "./routes/tags";
 
 // Load environment variables
 dotenv.config();
 
 const app = express();
 
-// Allow JSON request bodies
+// Parse JSON request bodies
 app.use(express.json());
 
-// Enable CORS so Blitz's frontend can call this API
+// Enable CORS (you can later restrict this to your frontend domain)
 app.use(
   cors({
-    origin: "*", // You can later restrict this to his frontend URL
+    origin: "*",
   })
 );
 
-// Health check / root route
-app.get("/", (req: Request, res: Response) => {
+/**
+ * Health check / root route
+ * Used by hosting platforms and quick status checks.
+ */
+app.get("/", (_req: Request, res: Response) => {
   res.send("PetMatch Backend is running 🐾");
 });
 
 // Mount feature routes
 app.use("/pets", petsRouter);
 app.use("/favorites", favoritesRouter);
+app.use("/adoption", adoptionRouter);
+app.use("/tags", tagsRouter);
 
-// Use PORT from env or default to 3000
+// Use PORT from environment or fallback to 3000
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
